@@ -1,13 +1,28 @@
 import React from 'react';
 import './App.css';
 
-class Cats extends React.Component {
+export class Container extends React.Component {
+  render() {
+    return (
+        <div>
+          <h2>Game</h2>
+          <Game />
+          <h2>Animals</h2>
+          <Animals />
+        </div>
+    );
+  }
+}
+
+class Animals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       error: null,
-      isLoaded: false,
-      cats: []
+      isCatsLoaded: false,
+      isHamstersLoaded: false,
+      cats: [],
+      hamsters: []
     };
   }
 
@@ -17,7 +32,7 @@ class Cats extends React.Component {
         .then(
             (result) => {
               this.setState({
-                isLoaded: true,
+                isCatsLoaded: true,
                 cats: result
               });
             },
@@ -26,7 +41,26 @@ class Cats extends React.Component {
             // exceptions from actual bugs in components.
             (error) => {
               this.setState({
-                isLoaded: true,
+                isCatsLoaded: true,
+                error
+              });
+            }
+        );
+    fetch("https://localhost:5001/api/hamsters")
+        .then(res => res.json())
+        .then(
+            (result) => {
+              this.setState({
+                isHamstersLoaded: true,
+                hamsters: result
+              });
+            },
+            // Note: it's important to handle errors here
+            // instead of a catch() block so that we don't swallow
+            // exceptions from actual bugs in components.
+            (error) => {
+              this.setState({
+                isHamstersLoaded: true,
                 error
               });
             }
@@ -34,23 +68,88 @@ class Cats extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, cats } = this.state;
+    const { error, isCatsLoaded, cats, isHamstersLoaded, hamsters } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
+    } else if (!isCatsLoaded || !isHamstersLoaded) {
       return <div>Loading...</div>;
     } else {
       return (
-          <ul>
-            {cats.map(cat => (
-                <li key={cat.name}>
-                  {cat.type} {cat.yearOfBirth}
-                </li>
-            ))}
-          </ul>
+          <div>
+            <ul>
+              {cats.map(cat => (
+                  <li key={cat.id}>
+                    {cat.name + cat.type + cat.yearOfBirth}
+                  </li>
+              ))}
+            </ul>
+            <ul>
+              {hamsters.map(hamster => (
+                  <li key={hamster.id}>
+                    {hamster.name + hamster.age}
+                  </li>
+              ))}
+            </ul>
+          </div>
       );
     }
   }
 }
 
-export default Cats;
+class Square extends React.Component {
+  render() {
+    return (
+        <button className="square">
+          {/* TODO */}
+        </button>
+    );
+  }
+}
+
+class Board extends React.Component {
+  renderSquare(i) {
+    return <Square />;
+  }
+
+  render() {
+    const status = 'Next player: X';
+
+    return (
+        <div>
+          <div className="status">{status}</div>
+          <div className="board-row">
+            {this.renderSquare(0)}
+            {this.renderSquare(1)}
+            {this.renderSquare(2)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(3)}
+            {this.renderSquare(4)}
+            {this.renderSquare(5)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(6)}
+            {this.renderSquare(7)}
+            {this.renderSquare(8)}
+          </div>
+        </div>
+    );
+  }
+}
+
+class Game extends React.Component {
+  render() {
+    return (
+        <div className="game">
+          <div className="game-board">
+            <Board />
+          </div>
+          <div className="game-info">
+            <div>{/* status */}</div>
+            <ol>{/* TODO */}</ol>
+          </div>
+        </div>
+    );
+  }
+}
+
