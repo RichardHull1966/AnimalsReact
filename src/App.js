@@ -76,17 +76,19 @@ class Animals extends React.Component {
     } else {
       return (
           <div>
+            <h3>Cats</h3>
             <ul>
               {cats.map(cat => (
                   <li key={cat.id}>
-                    {cat.name + cat.type + cat.yearOfBirth}
+                    Name: {cat.name} Type: {cat.type}, Year of birth: {cat.yearOfBirth}
                   </li>
               ))}
             </ul>
+            <h3>Hamsters</h3>
             <ul>
               {hamsters.map(hamster => (
                   <li key={hamster.id}>
-                    {hamster.name + hamster.age}
+                    Name: {hamster.name}, Age: {hamster.age}
                   </li>
               ))}
             </ul>
@@ -107,7 +109,7 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
-  renderSquare(i) {
+  static renderSquare(i) {
     return <Square />;
   }
 
@@ -118,19 +120,19 @@ class Board extends React.Component {
         <div>
           <div className="status">{status}</div>
           <div className="board-row">
-            {this.renderSquare(0)}
-            {this.renderSquare(1)}
-            {this.renderSquare(2)}
+            {Board.renderSquare(0)}
+            {Board.renderSquare(1)}
+            {Board.renderSquare(2)}
           </div>
           <div className="board-row">
-            {this.renderSquare(3)}
-            {this.renderSquare(4)}
-            {this.renderSquare(5)}
+            {Board.renderSquare(3)}
+            {Board.renderSquare(4)}
+            {Board.renderSquare(5)}
           </div>
           <div className="board-row">
-            {this.renderSquare(6)}
-            {this.renderSquare(7)}
-            {this.renderSquare(8)}
+            {Board.renderSquare(6)}
+            {Board.renderSquare(7)}
+            {Board.renderSquare(8)}
           </div>
         </div>
     );
