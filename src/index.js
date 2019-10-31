@@ -1,16 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import { Container } from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import Animals from './App'
+import CatCreate from './components/cats/create.component'
+import CatEdit from './components/cats/edit.component'
+import HamsterCreate from './components/hamsters/create.component'
+import HamsterEdit from './components/hamsters/edit.component'
 
-ReactDOM.render(
-    <BrowserRouter>
-        <Container />
-    </BrowserRouter>, document.getElementById('root'));
+const routing = (
+    <Router>
+        <Route exact path="/" component={Animals} />
+        <Route path="/cats/create" component={CatCreate} />
+        <Route path="/cats/edit" component={CatEdit} />
+        <Route path="/hamsters/create" component={HamsterCreate} />
+        <Route path="/hamsters/edit" component={HamsterEdit} />
+    </Router>
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(routing, document.getElementById('root'));
