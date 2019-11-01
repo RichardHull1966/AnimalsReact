@@ -24,8 +24,9 @@ export default class Cats extends Component {
                 console.log(error);
             });
     }
-    onEdit = () => {
-        this.setState({referrer: '/cats/edit'})
+    onEdit = (number) => {
+        console.log(number);
+        this.setState({referrer: `/cats/edit/${number}`})
     };
     render() {
         const { referrer, error, isCatsLoaded, cats } = this.state;
@@ -46,7 +47,7 @@ export default class Cats extends Component {
                     <ul>
                         {cats.map(cat => (
                             <li key={cat.id}>
-                                Name: {cat.name} Type: {cat.type}, Year of birth: {cat.yearOfBirth} - <button onClick={this.onEdit}>Edit</button> <button>Delete</button>
+                                Name: {cat.name} Type: {cat.type}, Year of birth: {cat.yearOfBirth} - <button onClick={() => this.onEdit(cat.id)}>Edit</button> <button>Delete</button>
                             </li>
                         ))}
                     </ul>

@@ -12,9 +12,9 @@ const routing = (
     <Router>
         <Route exact path="/" component={Animals} />
         <Route path="/cats/create" component={CatCreate} />
-        <Route path="/cats/edit" component={CatEdit} />
+        <Route path="/cats/edit/:id" component={CatEdit} />
         <Route path="/hamsters/create" component={HamsterCreate} />
-        <Route path="/hamsters/edit" component={HamsterEdit} />
+        <Route path="/hamsters/edit/:id" component={HamsterEdit} />
     </Router>
 );
 
