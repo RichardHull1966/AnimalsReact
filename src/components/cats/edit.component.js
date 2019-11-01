@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 
 export default class CatEdit extends Component {
@@ -13,7 +13,7 @@ export default class CatEdit extends Component {
                 id: 0,
                 name: '',
                 type: '',
-                yearOfBirth: '',
+                yearOfBirth: 0,
             }
         };
         this.handleChange = this.handleChange.bind(this);
@@ -34,14 +34,23 @@ export default class CatEdit extends Component {
             });
     }
     handleChange(event) {
-        console.log('changed it', event.target.value, event.target.name);
         this.setState({cat: {...this.state.cat, [event.target.name]: event.target.value}});
     }
     handleSubmit(event) {
-        console.log('this.state.cat:', this.state.cat);
         event.preventDefault();
+        axios.put(`https://localhost:5001/api/cats/${ this.state.cat.id }`, this.state.cat)
+        .then(() => {
+            this.setState({
+                referrer: '/'
+            })
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
     render() {
+        const { referrer } = this.state;
+        if (referrer) return <Redirect to={referrer} />;
         return (
           <div>
             <Link to={'/'}>Back</Link>

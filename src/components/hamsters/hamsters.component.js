@@ -24,8 +24,8 @@ export default class Hamsters extends Component {
                 console.log(error);
             });
     }
-    onEdit = () => {
-        this.setState({referrer: '/hamsters/edit'})
+    onEdit = (number) => {
+        this.setState({referrer: `/hamsters/edit/${number}`})
     };
     render() {
         const { referrer, error, isHamstersLoaded, hamsters } = this.state;
@@ -46,7 +46,7 @@ export default class Hamsters extends Component {
                     <ul>
                         {hamsters.map(hamster => (
                             <li key={hamster.id}>
-                                Name: {hamster.name}, Age: {hamster.age} - <button onClick={this.onEdit}>Edit</button> <button>Delete</button>
+                                Name: {hamster.name}, Age: {hamster.age} - <button onClick={() => this.onEdit(hamster.id)}>Edit</button> <button>Delete</button>
                             </li>
                         ))}
                     </ul>

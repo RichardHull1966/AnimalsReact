@@ -15,6 +15,7 @@ export default class Cats extends Component {
     componentDidMount() {
         axios.get("https://localhost:5001/api/cats")
             .then((result) => {
+                console.log('fetching cats');
                 this.setState({
                     isCatsLoaded: true,
                     cats: result.data
@@ -25,7 +26,6 @@ export default class Cats extends Component {
             });
     }
     onEdit = (number) => {
-        console.log(number);
         this.setState({referrer: `/cats/edit/${number}`})
     };
     render() {

@@ -6,7 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/cats/cats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/cats.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cats/edit.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/edit.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/hamsters/edit.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/edit.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +28,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/hamsters" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -115,7 +115,8 @@
       <workItem from="1565248830587" duration="90000" />
       <workItem from="1572421386417" duration="849000" />
       <workItem from="1572422337000" duration="8332000" />
-      <workItem from="1572533682350" duration="7027000" />
+      <workItem from="1572533682350" duration="7198000" />
+      <workItem from="1572621884038" duration="2112000" />
     </task>
     <servers />
   </component>
