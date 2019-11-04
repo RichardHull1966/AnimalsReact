@@ -12,10 +12,9 @@ export default class Cats extends Component {
             cats: []
         };
     }
-    componentDidMount() {
+    getCats() {
         axios.get("https://localhost:5001/api/cats")
             .then((result) => {
-                console.log('fetching cats');
                 this.setState({
                     isCatsLoaded: true,
                     cats: result.data
@@ -25,8 +24,17 @@ export default class Cats extends Component {
                 console.log(error);
             });
     }
+    componentDidMount() {
+        this.getCats();
+    }
     onEdit = (number) => {
         this.setState({referrer: `/cats/edit/${number}`})
+    };
+    onDelete = (number) => {
+        axios.delete(`https://localhost:5001/api/cats/${number}`)
+            .then(() => {
+                this.getCats();
+            })
     };
     render() {
         const { referrer, error, isCatsLoaded, cats } = this.state;
@@ -39,15 +47,13 @@ export default class Cats extends Component {
             return (
                 <div>
                     <h3>Cats</h3>
-                    <ul>
-                        <li>
-                            <Link to={'/cats/create'}>Create</Link>
-                        </li>
-                    </ul>
+                        <Link to={'/cats/create'}>Create</Link>
                     <ul>
                         {cats.map(cat => (
                             <li key={cat.id}>
-                                Name: {cat.name} Type: {cat.type}, Year of birth: {cat.yearOfBirth} - <button onClick={() => this.onEdit(cat.id)}>Edit</button> <button>Delete</button>
+                                Name: {cat.name} Type: {cat.type}, Year of birth: {cat.yearOfBirth}
+                                <button onClick={() => this.onEdit(cat.id)}>Edit</button>
+                                <button onClick={() => this.onDelete(cat.id)}>Delete</button>
                             </li>
                         ))}
                     </ul>

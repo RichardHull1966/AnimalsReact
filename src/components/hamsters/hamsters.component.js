@@ -12,7 +12,7 @@ export default class Hamsters extends Component {
             hamsters: []
         };
     }
-    componentDidMount() {
+    getHamsters() {
         axios.get("https://localhost:5001/api/hamsters")
             .then((result) => {
                 this.setState({
@@ -24,8 +24,17 @@ export default class Hamsters extends Component {
                 console.log(error);
             });
     }
+    componentDidMount() {
+        this.getHamsters();
+    }
     onEdit = (number) => {
         this.setState({referrer: `/hamsters/edit/${number}`})
+    };
+    onDelete = (number) => {
+        axios.delete(`https://localhost:5001/api/hamsters/${number}`)
+            .then(() => {
+                this.getHamsters();
+            })
     };
     render() {
         const { referrer, error, isHamstersLoaded, hamsters } = this.state;
@@ -38,15 +47,13 @@ export default class Hamsters extends Component {
             return (
                 <div>
                     <h3>Hamsters</h3>
-                    <ul>
-                        <li>
-                            <Link to={'/hamsters/create'}>Create</Link>
-                        </li>
-                    </ul>
+                        <Link to={'/hamsters/create'}>Create</Link>
                     <ul>
                         {hamsters.map(hamster => (
                             <li key={hamster.id}>
-                                Name: {hamster.name}, Age: {hamster.age} - <button onClick={() => this.onEdit(hamster.id)}>Edit</button> <button>Delete</button>
+                                Name: {hamster.name}, Age: {hamster.age}
+                                <button onClick={() => this.onEdit(hamster.id)}>Edit</button>
+                                <button onClick={() => this.onDelete(hamster.id)}>Delete</button>
                             </li>
                         ))}
                     </ul>
