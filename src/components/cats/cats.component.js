@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import withRouter from "react-router-dom/es/withRouter";
 
 class Cats extends Component {
@@ -9,7 +9,6 @@ class Cats extends Component {
         this.state = {
             error: null,
             isCatsLoaded: false,
-            referrer: null,
             cats: []
         };
     }
@@ -29,7 +28,7 @@ class Cats extends Component {
         this.getCats();
     }
     onEdit = (number) => {
-        this.setState({referrer: `/cats/edit/${number}`})
+        this.props.history.push(`/cats/edit/${number}`);
     };
     onDelete = (number) => {
         axios.delete(`https://localhost:5001/api/cats/${number}`)
@@ -38,8 +37,7 @@ class Cats extends Component {
             })
     };
     render() {
-        const { referrer, error, isCatsLoaded, cats } = this.state;
-        if (referrer) return <Redirect to={referrer} />;
+        const { error, isCatsLoaded, cats } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isCatsLoaded) {

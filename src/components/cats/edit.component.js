@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import withRouter from "react-router-dom/es/withRouter";
 
@@ -9,7 +9,6 @@ class CatEdit extends Component {
         this.state = {
             error: null,
             isCatLoaded: false,
-            referrer: null,
             cat: {
                 id: 0,
                 name: '',
@@ -40,17 +39,13 @@ class CatEdit extends Component {
         event.preventDefault();
         axios.put(`https://localhost:5001/api/cats/${ this.state.cat.id }`, this.state.cat)
         .then(() => {
-            this.setState({
-                referrer: '/'
-            })
+            this.props.history.push(`/`);
         })
         .catch(function (error) {
             console.log(error);
         });
     }
     render() {
-        const { referrer } = this.state;
-        if (referrer) return <Redirect to={referrer} />;
         return (
           <div>
             <Link to={'/'}>Back</Link>

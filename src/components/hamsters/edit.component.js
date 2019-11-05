@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import withRouter from "react-router-dom/es/withRouter";
 
@@ -39,17 +39,13 @@ class HamsterEdit extends Component {
     event.preventDefault();
     axios.put(`https://localhost:5001/api/hamsters/${ this.state.hamster.id }`, this.state.hamster)
         .then(() => {
-            this.setState({
-                referrer: '/'
-            })
+            this.props.history.push(`/`);
         })
         .catch(function (error) {
             console.log(error);
         });
     }
     render() {
-        const { referrer } = this.state;
-        if (referrer) return <Redirect to={referrer} />;
         return (
             <div>
                 <Link to={'/'}>Back</Link>

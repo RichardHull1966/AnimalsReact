@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import withRouter from "react-router-dom/es/withRouter";
 
 class Hamsters extends Component {
@@ -9,7 +9,6 @@ class Hamsters extends Component {
         this.state = {
             error: null,
             isHamstersLoaded: false,
-            referrer: null,
             hamsters: []
         };
     }
@@ -29,7 +28,7 @@ class Hamsters extends Component {
         this.getHamsters();
     }
     onEdit = (number) => {
-        this.setState({referrer: `/hamsters/edit/${number}`})
+        this.props.history.push(`/hamsters/edit/${number}`);
     };
     onDelete = (number) => {
         axios.delete(`https://localhost:5001/api/hamsters/${number}`)
@@ -38,8 +37,7 @@ class Hamsters extends Component {
             })
     };
     render() {
-        const { referrer, error, isHamstersLoaded, hamsters } = this.state;
-        if (referrer) return <Redirect to={referrer} />;
+        const { error, isHamstersLoaded, hamsters } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isHamstersLoaded) {
