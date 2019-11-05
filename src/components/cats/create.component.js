@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link, Redirect} from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import withRouter from "react-router-dom/es/withRouter";
 
-export default class CatCreate extends Component {
+class CatCreate extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -61,3 +62,5 @@ export default class CatCreate extends Component {
         )
     }
 }
+
+export default withRouter(CatCreate);

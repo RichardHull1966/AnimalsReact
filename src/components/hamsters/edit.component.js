@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import withRouter from "react-router-dom/es/withRouter";
 
-export default class HamsterEdit extends Component {
+class HamsterEdit extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,7 +27,6 @@ export default class HamsterEdit extends Component {
                     isHamsterLoaded: true,
                     hamster: result.data
                 });
-                console.log(this.state.hamster);
             })
             .catch(function (error) {
                 console.log(error);
@@ -73,3 +73,5 @@ export default class HamsterEdit extends Component {
         )
     }
 }
+
+export default withRouter(HamsterEdit);

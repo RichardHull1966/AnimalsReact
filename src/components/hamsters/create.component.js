@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import withRouter from "react-router-dom/es/withRouter";
 
-export default class HamsterCreate extends Component {
+class HamsterCreate extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -56,3 +57,6 @@ export default class HamsterCreate extends Component {
         )
     }
 }
+
+export default withRouter(HamsterCreate);
+

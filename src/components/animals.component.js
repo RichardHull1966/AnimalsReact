@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import Cats from "./cats/cats.component";
 import Hamsters from "./hamsters/hamsters.component";
+import withRouter from "react-router-dom/es/withRouter";
 
-export default class Animals extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: null,
-            isCatsLoaded: false,
-            cats: []
-        };
-    }
+class Animals extends Component {
     render() {
         return (
             <div>
@@ -21,3 +14,4 @@ export default class Animals extends Component {
     }
 }
 
+export default withRouter(Animals);

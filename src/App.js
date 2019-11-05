@@ -1,10 +1,11 @@
 import React, { Component, version } from 'react';
 import './App.css';
-import Animals from './components/animals.component'
+import Animals from './components/animals.component';
+import withRouter from "react-router-dom/es/withRouter";
 
 const REACT_VERSION = version;
 
-export default class Container extends Component {
+class Container extends Component {
     render() {
         return (
             <div>
@@ -14,3 +15,5 @@ export default class Container extends Component {
         );
     }
 }
+
+export default withRouter(Container);
