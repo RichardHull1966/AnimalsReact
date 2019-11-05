@@ -52,9 +52,9 @@ class Hamsters extends Component {
                     <ul>
                         {hamsters.map(hamster => (
                             <li key={hamster.id}>
-                                Name: {hamster.name}, Age: {hamster.age}
-                                <button onClick={() => this.onEdit(hamster.id)}>Edit</button>
-                                <button onClick={() => this.onDelete(hamster.id)}>Delete</button>
+                                <strong>Name:</strong> {hamster.name}, <strong>Age:</strong> {hamster.age}
+                                <button class='control-button' onClick={() => this.onEdit(hamster.id)}>Edit</button>
+                                <button class='control-button' onClick={() => this.onDelete(hamster.id)}>Delete</button>
                             </li>
                         ))}
                     </ul>

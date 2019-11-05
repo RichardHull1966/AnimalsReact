@@ -52,9 +52,9 @@ class Cats extends Component {
                     <ul>
                         {cats.map(cat => (
                             <li key={cat.id}>
-                                Name: {cat.name} Type: {cat.type}, Year of birth: {cat.yearOfBirth}
-                                <button onClick={() => this.onEdit(cat.id)}>Edit</button>
-                                <button onClick={() => this.onDelete(cat.id)}>Delete</button>
+                                <strong>Name:</strong> {cat.name}, <strong>Type:</strong> {cat.type}, <strong>Year of birth:</strong> {cat.yearOfBirth}
+                                <button class='control-button' onClick={() => this.onEdit(cat.id)}>Edit</button>
+                                <button class='control-button' onClick={() => this.onDelete(cat.id)}>Delete</button>
                             </li>
                         ))}
                     </ul>

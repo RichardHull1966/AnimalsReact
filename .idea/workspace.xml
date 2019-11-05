@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="163eb3b5-f937-44de-9f6a-397471b032b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cats/cats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/cats.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cats/create.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/create.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hamsters/create.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/create.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

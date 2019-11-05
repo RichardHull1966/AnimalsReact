@@ -33,8 +33,8 @@ class CatCreate extends Component {
     render() {
         return (
             <div>
-                <h3>Add New Cat</h3>
                 <button onClick={this.props.history.goBack}>Back</button>
+                <h3>Add New Cat</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label>Name:  </label>

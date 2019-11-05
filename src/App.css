@@ -3,3 +3,16 @@ ul {
   margin-left: 0;
   padding-left: 0;
 }
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.control-button {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+form div {
+  margin-bottom: 10px;
+}
