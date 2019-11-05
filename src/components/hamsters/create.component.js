@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import axios from "axios";
 import withRouter from "react-router-dom/es/withRouter";
 
@@ -34,7 +33,7 @@ class HamsterCreate extends Component {
         return (
             <div>
                 <h3>Add New Hamster</h3>
-                <Link to={'/'}>Back</Link>
+                <button onClick={this.props.history.goBack}>Back</button>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label>Name:  </label>

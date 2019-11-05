@@ -27,6 +27,9 @@ class Hamsters extends Component {
     componentDidMount() {
         this.getHamsters();
     }
+    onCreate = () => {
+        this.props.history.push('/cats/create');
+    };
     onEdit = (number) => {
         this.props.history.push(`/hamsters/edit/${number}`);
     };
@@ -46,7 +49,7 @@ class Hamsters extends Component {
             return (
                 <div>
                     <h3>Hamsters</h3>
-                        <Link to={'/hamsters/create'}>Create</Link>
+                    <button onClick={() => this.onCreate()}>Create</button>
                     <ul>
                         {hamsters.map(hamster => (
                             <li key={hamster.id}>

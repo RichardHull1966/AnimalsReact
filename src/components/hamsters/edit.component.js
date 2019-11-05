@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import axios from "axios";
 import withRouter from "react-router-dom/es/withRouter";
 
@@ -48,7 +47,7 @@ class HamsterEdit extends Component {
     render() {
         return (
             <div>
-                <Link to={'/'}>Back</Link>
+                <button onClick={this.props.history.goBack}>Back</button>
                 <h3>You are editing hamster: {this.state.hamster.name}</h3>
                 <div>
                     <form onSubmit={this.handleSubmit}>

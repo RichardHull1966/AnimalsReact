@@ -27,6 +27,9 @@ class Cats extends Component {
     componentDidMount() {
         this.getCats();
     }
+    onCreate = () => {
+        this.props.history.push('/cats/create');
+    };
     onEdit = (number) => {
         this.props.history.push(`/cats/edit/${number}`);
     };
@@ -46,7 +49,7 @@ class Cats extends Component {
             return (
                 <div>
                     <h3>Cats</h3>
-                        <Link to={'/cats/create'}>Create</Link>
+                    <button onClick={() => this.onCreate()}>Create</button>
                     <ul>
                         {cats.map(cat => (
                             <li key={cat.id}>
