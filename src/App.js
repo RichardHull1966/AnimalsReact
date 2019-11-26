@@ -13,7 +13,7 @@ export default class Container extends Component {
     render() {
         return (
             <div>
-                <h2>Animals Ap - React version: { REACT_VERSION }</h2>
+                <h2 id='page-title'>Animals Ap - React version: { REACT_VERSION }</h2>
                 <Router>
                     <Route exact path="/" component={Animals} />
                     <Route path="/cats/create" component={CatCreate} />

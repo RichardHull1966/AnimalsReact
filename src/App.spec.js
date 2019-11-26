@@ -6,8 +6,15 @@ import { configure, shallow } from 'enzyme';
 
 configure({ adapter: new Adapter() });
 
-describe('First React component test with Enzyme', () => {
+describe('Container', () => {
+    var wrapper = shallow(<Container />);
+
     it('renders without crashing', () => {
-        shallow(<Container />);
+        expect(wrapper).toBeDefined();
     });
+
+    it('should render the correct react version in the title', () => {
+        var pageTitle = wrapper.find('#page-title');
+        expect(pageTitle.text()).toContain('Animals Ap - React version: 16.12.0');
+    })
 });
