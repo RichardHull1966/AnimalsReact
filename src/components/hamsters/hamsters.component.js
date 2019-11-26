@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import withRouter from "react-router-dom/es/withRouter";
+import { withRouter } from "react-router-dom";
 
 class Hamsters extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class Hamsters extends Component {
         this.getHamsters();
     }
     onCreate = () => {
-        this.props.history.push('/cats/create');
+        this.props.history.push('/hamsters/create');
     };
     onEdit = (number) => {
         this.props.history.push(`/hamsters/edit/${number}`);
@@ -53,8 +53,8 @@ class Hamsters extends Component {
                         {hamsters.map(hamster => (
                             <li key={hamster.id}>
                                 <strong>Name:</strong> {hamster.name}, <strong>Age:</strong> {hamster.age}
-                                <button class='control-button' onClick={() => this.onEdit(hamster.id)}>Edit</button>
-                                <button class='control-button' onClick={() => this.onDelete(hamster.id)}>Delete</button>
+                                <button className='control-button' onClick={() => this.onEdit(hamster.id)}>Edit</button>
+                                <button className='control-button' onClick={() => this.onDelete(hamster.id)}>Delete</button>
                             </li>
                         ))}
                     </ul>

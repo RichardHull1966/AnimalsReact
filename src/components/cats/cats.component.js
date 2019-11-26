@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import withRouter from "react-router-dom/es/withRouter";
+import { withRouter } from "react-router-dom";
 
 class Cats extends Component {
     constructor(props) {
@@ -53,8 +53,8 @@ class Cats extends Component {
                         {cats.map(cat => (
                             <li key={cat.id}>
                                 <strong>Name:</strong> {cat.name}, <strong>Type:</strong> {cat.type}, <strong>Year of birth:</strong> {cat.yearOfBirth}
-                                <button class='control-button' onClick={() => this.onEdit(cat.id)}>Edit</button>
-                                <button class='control-button' onClick={() => this.onDelete(cat.id)}>Delete</button>
+                                <button className='control-button' onClick={() => this.onEdit(cat.id)}>Edit</button>
+                                <button className='control-button' onClick={() => this.onDelete(cat.id)}>Delete</button>
                             </li>
                         ))}
                     </ul>

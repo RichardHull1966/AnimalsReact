@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163eb3b5-f937-44de-9f6a-397471b032b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cats/cats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/cats.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cats/create.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/create.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hamsters/create.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/create.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,6 +18,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,7 +74,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.renders without crashing">
+  <component name="RunManager" selected="Jest.First React component test with Enzyme">
+    <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/App.spec.js" />
+      <test-names>
+        <test-name value="App" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="First React component test with Enzyme" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/App.spec.js" />
+      <test-names>
+        <test-name value="First React component test with Enzyme" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -97,6 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.First React component test with Enzyme" />
+        <item itemvalue="Jest.App" />
         <item itemvalue="Jest.renders without crashing" />
       </list>
     </recent_temporary>
@@ -118,6 +152,8 @@
       <workItem from="1572422337000" duration="8332000" />
       <workItem from="1572533682350" duration="7198000" />
       <workItem from="1572621884038" duration="5064000" />
+      <workItem from="1573052379278" duration="640000" />
+      <workItem from="1574687392041" duration="6418000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import withRouter from "react-router-dom/es/withRouter";
+import { withRouter } from "react-router-dom";
 
 class CatEdit extends Component {
     constructor(props) {
