@@ -7,8 +7,12 @@ class Animals extends Component {
     render() {
         return (
             <div>
-                <Cats />
-                <Hamsters />
+                <Cats positiveTraits={'Cute'} negativeTraits={'Arrogant'}>
+                    Cats
+                </Cats>
+                <Hamsters positiveTraits={'Cheap'} negativeTraits={'Scratchy'}>
+                    Hamsters
+                </Hamsters>
             </div>
         )
     }

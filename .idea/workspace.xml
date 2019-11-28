@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163eb3b5-f937-44de-9f6a-397471b032b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/animals.component.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cats/cats.component.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/traits.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animals.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animals.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cats/cats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cats/cats.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hamsters/hamsters.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,16 +82,16 @@
     </option>
   </component>
   <component name="RunManager" selected="Jest.Container">
-    <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Cats" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/App.spec.js" />
+      <test-file value="$PROJECT_DIR$/src/components/cats/cats.component.spec.js" />
       <test-names>
-        <test-name value="App" />
+        <test-name value="Cats" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -100,29 +108,44 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="First React component test with Enzyme" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/App.spec.js" />
-      <test-names>
-        <test-name value="First React component test with Enzyme" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Container.should render the cats component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/App.test.js" />
+      <test-file value="$PROJECT_DIR$/src/App.spec.js" />
       <test-names>
-        <test-name value="renders without crashing" />
+        <test-name value="Container" />
+        <test-name value="should render the cats component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;Animals /&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/animals.component.spec.js" />
+      <test-names>
+        <test-name value="&lt;Animals /&gt;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;Animals /&gt;.should render the cats component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/animals.component.spec.js" />
+      <test-names>
+        <test-name value="&lt;Animals /&gt;" />
+        <test-name value="should render the cats component" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -142,9 +165,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Jest.Container" />
-        <item itemvalue="Jest.First React component test with Enzyme" />
-        <item itemvalue="Jest.App" />
-        <item itemvalue="Jest.renders without crashing" />
+        <item itemvalue="Jest.Container.should render the cats component" />
+        <item itemvalue="Jest.Cats" />
+        <item itemvalue="Jest.&lt;Animals /&gt;" />
+        <item itemvalue="Jest.&lt;Animals /&gt;.should render the cats component" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +190,8 @@
       <workItem from="1572533682350" duration="7198000" />
       <workItem from="1572621884038" duration="5064000" />
       <workItem from="1573052379278" duration="640000" />
-      <workItem from="1574687392041" duration="8523000" />
+      <workItem from="1574687392041" duration="11038000" />
+      <workItem from="1574764393693" duration="28812000" />
     </task>
     <servers />
   </component>

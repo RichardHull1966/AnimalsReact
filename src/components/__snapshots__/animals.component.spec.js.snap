@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Animals should render the cats component 1`] = `ShallowWrapper {}`;
+
+exports[`Animals should render the hamsters component 1`] = `ShallowWrapper {}`;

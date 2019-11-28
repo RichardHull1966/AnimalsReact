@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from "react-router-dom";
+import Traits from "../traits.component";
 
 class Hamsters extends Component {
     constructor(props) {
@@ -47,7 +48,8 @@ class Hamsters extends Component {
         } else {
             return (
                 <div>
-                    <h3>Hamsters</h3>
+                    <h3>{this.props.children}</h3>
+                    <Traits positiveTraits={this.props.positiveTraits} negativeTraits={this.props.negativeTraits} />
                     <button onClick={() => this.onCreate()}>Create</button>
                     <ul>
                         {hamsters.map(hamster => (
